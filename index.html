@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Schedulify</title>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="particles-js"></div> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script  src="./script.js"></script>
+
+
+  <!-- code stuff -->
+   <!--navbar!!!!-->
+   <nav class="bg-gray-800" style="z-index: 20; position: relative">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex shrink-0 items-center">
+            <a href="./index.html">
+            <img class="h-10 w-auto" src="./Logo.gif" alt="Your Company">
+            </a>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <a href="." class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
+              <a href="./calendar.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+              <a href="./form.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Form</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+          <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Form</a>
+        </div>
+      </div>
+  </nav>  
+
+  <div class="text-container">
+    <h1>SCHEDULIFY</h1>
+  </div>
+  
+  <div class="button-container">
+    <button class = "btn" onclick="location.href='./calendar.html'"> Calendar</button>
+    <button class = "btn" onclick="location.href='./form.html'"> Form </button>
+  </div>
+
+</body>
+</html>
+
+
