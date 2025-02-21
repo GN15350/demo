@@ -1,57 +1,101 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schedulify</title>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-     <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="particles.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./logo.png">
 </head>
-<body>
-<div id="particles-js"></div> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script  src="./script.js"></script>
 
+<body class="bg-gray-900 text-gray-100">
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
 
-  <!-- code stuff -->
-   <!--navbar!!!!-->
-   <nav class="bg-gray-800" style="z-index: 20; position: relative">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 shadow-lg no-particles">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <div class="flex items-center">
+          <a href="./index.html">
+            <img class="h-12 w-auto" src="./logo.png" alt="Logo">
+          </a>
+          <span class="ml-4 text-3xl font-extrabold text-white tracking-wide gradient-text">
+            Schedulify
+          </span>
         </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex shrink-0 items-center">
-            <a href="./index.html">
-            <img class="h-10 w-auto" src="./Logo.gif" alt="Your Company">
-            </a>
-          </div>
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
-              <a href="." class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
-              <a href="./calendar.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
-              <a href="./form.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Form</a>
-            </div>
-          </div>
-        </div>
+        <div class="hidden sm:flex gap-x-3">
+          <a href="."
+            class="rounded-md bg-blue-500 px-5 py-2 text-lg font-medium text-white shadow-lg hover:bg-blue-600">Home</a>
+          <a href="./calendar.html"
+            class="rounded-md px-5 py-2 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+          <a href="./form.html"
+            class="rounded-md px-5 py-2 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Form</a>
         </div>
       </div>
     </div>
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pt-2 pb-3">
-          <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Form</a>
-        </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative text-center px-4">
+    <div class="no-particles">
+      <h1 class="text-6xl font-extrabold text-gray-100 mb-4">
+        Welcome to Schedulify
+      </h1>
+      <p class="text-lg text-gray-300">Brought to you by APCSA 4A</p>
+      <div class="mt-8">
+        <a href="./calendar.html"
+          class="rounded-md px-6 py-3 text-lg font-medium text-white shadow-lg mx-5 btn">View Events</a>
+        <a href="./form.html"
+          class="rounded-md px-6 py-3 text-lg font-medium text-white shadow-lg mx-5 btn">Add Event</a>
       </div>
-  </nav>  
+    </div>
+  </header>
 
-  <div class="text-container">
-    <h1>SCHEDULIFY</h1>
-    <button class = "btn" onclick="location.href='./calendar.html'"> Calendar</button>
-    <button class = "btn" onclick="location.href='./form.html'"> Form </button>
-  </div>
+  <section class="bg-gray-800 py-12 px-6">
+    <div class="mx-auto max-w-5xl text-center">
+      <h2 class="text-5xl font-bold text-white mb-12">About This Project</h2>
+      <div class="space-y-8 text-left">
+        <details class="group bg-gray-700 p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <summary class="text-3xl font-semibold text-gray-300 cursor-pointer flex justify-between items-center">
+            <span>What is this project?</span>
+            <i class="fa fa-angle-down text-gray-300 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-gray-400 text-lg mt-4 leading-relaxed">This web application allows teachers in FISD to add events to a shared calendar through a simple form. Designed for collaboration and accessibility, the calendar ensures that all educators can stay informed about important dates, meetings, and school events in one centralized location.
+          </p>
+        </details>
+        <details class="group bg-gray-700 p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <summary class="text-3xl font-semibold text-gray-300 cursor-pointer flex justify-between items-center">
+            <span>Who are we?</span>
+            <i class="fa fa-angle-down text-gray-300 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-gray-400 text-lg mt-4 leading-relaxed">This web application was created by the students of Frisco High School’s 4B AP Computer Science A class. As part of our coursework, we designed and developed the platform to address a real-world need within the FISD community. Through collaboration and problem-solving, we applied their programming skills to build a functional and user-friendly tool for teachers. This project showcases our ability to develop practical software solutions while gaining hands-on experience in web development.</p>
+        </details>
+        <details class="group bg-gray-700 p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <summary class="text-3xl font-semibold text-gray-300 cursor-pointer flex justify-between items-center">
+            <span>Why did we make this project?</span>
+            <i class="fa fa-angle-down text-gray-300 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-gray-400 text-lg mt-4 leading-relaxed">We created this provide a centralized scheduling tool for teachers in FISD. We recognized the need for an easy way to add and share events across the district, ensuring that all educators stay informed and organized. By developing this platform, we aimed to simplify event management, enhance collaboration, and create a practical solution that benefits the teaching community. This project allowed us to apply our programming skills to solve a real-world problem while gaining valuable experience in software development.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-100 text-center py-6">
+    <p>🄯 2025 Schedulify. No rights reserved.</p>
+  </footer>
+
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
 </body>
+
 </html>
